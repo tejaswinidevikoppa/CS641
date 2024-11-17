@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, Image, ActivityIndicator } from 'react-native';
+import FunctionalComponent from './components/FunctionalComponent';
 
-export default function App() {
+
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+      <Text>Text 1</Text>
+      <Text>text 2</Text>
+      <ActivityIndicator></ActivityIndicator>
+      <FunctionalComponent buttonTitle={'One'} showButton={true}/>
+
+    </ScrollView>
   );
 }
 
@@ -17,4 +23,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  tinyLogo: {
+    width: 500,
+    height: 500,
+  },
 });
+
+
+export default App;
